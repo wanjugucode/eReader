@@ -70,7 +70,6 @@ def edit_grade1_course(request,id):
     return render(request,'grades/first/edit_grade1_course.html',{"form":form})
 from django.shortcuts import render
 
-
 # grade2
 
 def add_grade2_course(request):
@@ -87,6 +86,7 @@ def add_grade2_course(request):
 def grade2_course_list(request):
     courses=GradeTwo.objects.all()
     return render(request,"grades/second/grade2_course_list.html",{ "courses":courses})
+
 
 def edit_grade2_course(request,id):  
     course=GradeTwo.objects.get(id=id)
