@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="register">
+    <ul class="mytop-navi">
+    <li class=" nav-list"><a href="{% url 'courses_list' %}">Courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_course' %}">Add new course</a></li>
+    
+    <li class=" nav-list"><a href="{% url 'grade1_course_list' %}">Grade1 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade1_course' %}">Add grade1 course</a></li>
+
+    <li class=" nav-list"><a href="{% url 'add_grade2_course' %}">Grade2 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade2_course' %}">Add grade2 courses</a></li>
+    
+    <li class=" nav-list"><a href="{% url 'add_grade3_course' %}">Grade3 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade3_course' %}">Add grade3 courses</a></li>
+ 
+    <li class=" nav-list"><a href="{% url 'add_grade4_course' %}">Grade4 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade4_course' %}">Add grade4 courses</a></li>
+
+    <li class=" nav-list"><a href="{% url 'add_grade5_course' %}">Grade5 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade5_course' %}">Add grade5 courses</a></li>
+
+    <li class=" nav-list"><a href="{% url 'add_grade6_course' %}">Grade6 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade6_course' %}">Add grade6 courses</a></li>
+
+    <li class=" nav-list"><a href="{% url 'add_grade7_course' %}">Grade7 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade7_course' %}">Add grade7 courses</a></li>
+
+    <li class=" nav-list"><a href="{% url 'add_grade8_course' %}">Grade8 courses</a></li>
+    <li class=" nav-list"><a href="{% url 'add_grade8_course' %}">Add grade8 courses</a></li>
+</ul>
+
+
+</div>
+
+
+
+
+
+    <style>
+
+
+        .mytop-navi{
+            
+            letter-spacing: none;
+            margin: 0;
+            padding-left: 20px;
+            width: 200px;
+            height: 100%;
+            background-color:rgb(70,32,125);
+            position: fixed;
+            list-style: none;
+
+               }
+        .nav-list{
+            padding: 6px;
+            margin-top: 10px;
+            text-decoration: none;
+            
+        }
+        .nav-list a{
+            display: block;
+            width: 150px;
+            color: white;
+            text-decoration: none;
+            font-size: medium;
+           
+        }
+        .nav-list a:hover{
+            background-color: white;
+            color:rgb(70,32,125);
+            text-decoration: none;
+           
+        } 
+
+     
+ 
+    </style>
+
+</body>
+</html>
