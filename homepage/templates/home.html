@@ -1,18 +1,25 @@
-{% include 'navbar.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-  
-    <title>Courses list</title>
-</head>
-<body>
-  <p>Courses</p>
+  <div class="container">
+    <div class="row " >
+        {% for course in courses %}
+        <div class="col-md-3">
+            <div class="card body-session">
+                <img src="{{ course.course.url}}" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">
+                        <a id="profile-link" href="{%url 'course-profile' course.id%}">View Profile</a>
 
-
-</body>
-
-
-
-</body>
-</html>
+                        {{ course.course_title }}
+                    </div>
+                   
+                    <div class="card-text">
+                    <!-- {{ course.date }} -->
+                    </div>
+                    <div class="card-text">
+                </div>
+              </div>
+             </div>   
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>

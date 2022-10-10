@@ -59,6 +59,7 @@ def grade1_course_list(request):
     courses=GradeOne.objects.all()
     return render(request,"grades/first/grade1_course_list.html",{ "courses":courses})
 
+
 def edit_grade1_course(request,id):  
     course=GradeOne.objects.get(id=id)
     if request.method=="POST":
