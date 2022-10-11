@@ -12,7 +12,15 @@
     <ul class="mytop-navi">
     <li class=" nav-list"><a href="{% url 'courses_list' %}">Courses</a></li>
     <li class=" nav-list"><a href="{% url 'add_course' %}">Add new course</a></li>
-
+    <!-- <button class="dropdown-btn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div> -->
+    
     <li class=" nav-list"><a href="{% url 'grade1_course_list' %}">Grade1 courses</a></li>
     <li class=" nav-list"><a href="{% url 'add_grade1_course' %}">Add grade1 course</a></li>
 
@@ -42,45 +50,44 @@
 </div>
 
 
-
 <style>
-
-
-  .mytop-navi{
+ 
+.mytop-navi{
       
-      letter-spacing: none;
-      margin: 0;
-      padding-left: 20px;
-      width: 200px;
-      height: 100%;
-      background-color:rgb(70,32,125);
-      position: fixed;
-      list-style: none;
+  letter-spacing: none;
+  margin: -1%;
+  padding-left: 20px;
+  width: 200px;
+  height: 130%;
+  background-color:rgb(70,32,125);
+  position: fixed;
+  list-style: none;
 
-         }
-  .nav-list{
-      padding: 3px;
-      margin-top: 10px;
-      text-decoration: none;
-      
-  }
-  .nav-list a{
-      display: block;
-      width: 150px;
-      color: white;
-      text-decoration: none;
-      font-size: medium;
-     
-  }
-  .nav-list a:hover{
-      background-color: white;
-      color:rgb(70,32,125);
-      text-decoration: none;
-     
-  } 
+     }
+.nav-list{
+  padding: 1px;
+  margin-top: 10px;
+  text-decoration: none;
+  
+}
+.nav-list a{
+  display: block;
+  width: 150px;
+  color: white;
+  text-decoration: none;
+  font-size: medium;
+ 
+}
+.nav-list a:hover{
+  background-color: white;
+  color:rgb(70,32,125);
+  text-decoration: none;
+ 
+} 
 
 
 
 </style>
+
 </body>
 </html>
