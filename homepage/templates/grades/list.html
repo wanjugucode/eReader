@@ -15,15 +15,18 @@
     <div class="row " >
         <div class="col-md-3">
             <div class="card body-session">
-
-                <img src="{{ course.course_image.url}}" class="card-img-top">
+                {% if course.course_image %}
+                <img src="{{ course.course_image.url}}" alt="{{ course.title}}" class="card-img-top">
+                {% else %}
+                <span class="text-muted">No PDF</span>
+                {% endif %}
                 <div class="card-body">
                     <div class="card-title ">
                         {{ course.title }}
                     </div>
                     <div class="card-text ">
                     {% if course.profile %}
-                   <button> <a href="{{ course.pdf.url }}" download class="btn-outline-primary">View PDF</a></button>
+                   <button> <a href="{{ course.profile.url }}" download class="btn-outline-primary" >Read</a></button>
                     {% else %}
 
                     <span class="text-muted">No PDF</span>
@@ -35,7 +38,7 @@
                
                     <div class="card-text">
                         {% if course.profile %}
-                     <button>   <a href="{{ course.pdf.url }}" download class="btn-outline-sucess">Download PDF</a></button>                     
+                     <button>   <a href="{{ course.profile.url }}" download class="btn-outline-sucess" target="_blank">Download</a></button>                     
                         {% else %}
                         <span class="text-muted">No PDF</span>
                       
@@ -44,6 +47,7 @@
            
              
              </div>   
+
         </div>
      
     </div>
