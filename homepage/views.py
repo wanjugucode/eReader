@@ -1,6 +1,18 @@
+from audioop import reverse
+from http.client import HTTPResponse
+import json
+import logging
 from django.shortcuts import render
 from homepage.forms import *
 from homepage.models import Course
+from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+
+
+
 
 # Create your views here.
 
@@ -260,3 +272,17 @@ def edit_grade8_course(request,id):
     else:
         form=GradeEightCourseAdditionForm(instance=course)
     return render(request,'grades/eighth/edit_grade8_course.html',{"form":form})
+
+
+
+from django_daraja.mpesa.core import MpesaClient
+
+def index(request):
+    cl = MpesaClient()
+    phone_number = '0700111222'
+    amount = 1
+    account_reference = 'reference'
+    transaction_desc = 'Description'
+    callback_url = request.build_absolute_uri(reverse('mpesa_stk_push_callback'))
+    response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+    return HTTPResponse(response)

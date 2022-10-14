@@ -4,6 +4,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <link rel="stylesheet" href="main.css">
     <title>Courses list</title>
@@ -68,7 +70,11 @@
 </body>
 
 <style>
- 
+@media screen and (max-width: 420px) { /*According to mobile size you can change the width*/
+    .bt-contact{
+        padding-left: 100px;/* give some less px value */
+    }
+}
 img{
   height: 249px;
   width: 249px;
@@ -77,6 +83,7 @@ img{
 .row{
     float: left;
     align-items: center;
+    margin-left: 4%;
    
 }
 .card-title {
@@ -100,6 +107,8 @@ img{
     padding: 2px 2px 2px 4px;
     text-align: center;
   
+    
+  
 }
 .card-text a:hover{
   text-decoration: underline;
@@ -109,10 +118,11 @@ img{
   display: block;
   width: 250px;
   margin: 1px;
-  margin-bottom: 10%;
+  margin-bottom: 25%;
   box-shadow:2px 8px 8px 2px rgb(70,32,125);
   left:33%;
- 
+  margin-top: -30px;
+
   padding-bottom: 20%;
   
 
@@ -121,14 +131,14 @@ img{
 
 
 button{
-
+    
     width: 42%;
     height: 17%;
     border-radius: 25px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     background-color:white;
     box-shadow: 2px 2px 4px rgb(70,32,125);
     padding: auto;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,11 @@
  </body>
  </html>
     <style>
+        @media screen and (max-width: 420px) { /*According to mobile size you can change the width*/
+    .bt-contact{
+        padding-left: 100px;/* give some less px value */
+    }
+}
         h1{
             text-align: center;
         }
@@ -44,11 +50,15 @@
           input{
              width: 100%;
              outline: none;
-             border: 1px solid ;
+             border: 1px solid rgb(118,118,118);
              font-size: 15px;
              padding: 8px 8px;
              
          }
+       input:focus{
+    outline: 0;
+    border: 1px solid red;
+}
          select{
              width: 100%;
              padding: 8px 10px;
